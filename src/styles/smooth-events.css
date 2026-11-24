@@ -1,0 +1,131 @@
+/* ===================================================
+   Events carousel — layout fixes & smoother motion
+   (doubled class selectors so these win over main.css,
+   which is injected later in the cascade)
+   =================================================== */
+
+/* Track: size from the section, not the viewport, so desktop never overflows */
+.Sections-module__ATazDG__events.Sections-module__ATazDG__events {
+  padding: 8px 9% 24px;
+  scroll-padding-inline: 9%;
+  gap: 12px;
+  scroll-behavior: smooth;
+}
+
+/* Card: one consistent "photo on top, details below" layout on every screen */
+.Sections-module__ATazDG__eventCard.Sections-module__ATazDG__eventCard {
+  flex: 0 0 100%; /* % of the padded track, so neighbours peek in on both sides */
+  max-width: 520px;
+  height: auto;
+  flex-direction: column;
+  scroll-snap-align: center;
+  border-radius: 18px;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 0.5s ease,
+              box-shadow 0.5s ease;
+  opacity: 0.7;
+  transform: scale(0.95);
+}
+
+.Sections-module__ATazDG__eventCard.Sections-module__ATazDG__eventCard.is-active {
+  opacity: 1;
+  transform: scale(1);
+  box-shadow: 0 18px 40px rgba(46, 22, 80, 0.16);
+}
+
+/* Photo */
+.Sections-module__ATazDG__eventArt.Sections-module__ATazDG__eventArt {
+  flex: none;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  max-height: none;
+  aspect-ratio: 4 / 3.4;
+}
+
+.Sections-module__ATazDG__eventArt.Sections-module__ATazDG__eventArt img {
+  /* These invitation illustrations keep their people at the bottom — anchor there */
+  object-position: 50% 100%;
+  transform: scale(1.06);
+  transform-origin: 50% 100%;
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.Sections-module__ATazDG__eventCard.is-active .Sections-module__ATazDG__eventArt img {
+  transform: scale(1);
+}
+
+/* Title sits in the photo's empty top area on a soft cream fade, never over the people */
+.Sections-module__ATazDG__eventPoster.Sections-module__ATazDG__eventPoster .Sections-module__ATazDG__eventHead {
+  position: absolute;
+  inset: 0 0 auto 0;
+  top: 0;
+  padding: 14px 16px 34px;
+  background: linear-gradient(0deg, rgba(255, 252, 246, 0) 0%, rgba(255, 252, 246, 0.82) 45%, rgba(255, 252, 246, 0.95) 100%);
+  text-align: center;
+}
+
+.Sections-module__ATazDG__eventPoster.Sections-module__ATazDG__eventPoster .Sections-module__ATazDG__eventTitle {
+  font-size: clamp(24px, 7cqw, 38px);
+  margin: 0;
+}
+
+/* Details */
+.Sections-module__ATazDG__eventBody.Sections-module__ATazDG__eventBody {
+  justify-content: flex-start;
+  padding: 14px clamp(16px, 4%, 28px) 20px;
+  text-align: center;
+}
+
+/* Swipe hint: keep it inside the section on wide screens */
+.Sections-module__ATazDG__swipeHint.Sections-module__ATazDG__swipeHint {
+  left: calc(50% - 26px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .Sections-module__ATazDG__events.Sections-module__ATazDG__events {
+    scroll-behavior: auto;
+  }
+}
+
+/* Illustration (e.g. Ganesh ji line art): centred on a warm cream glow instead of cropped */
+.Sections-module__ATazDG__eventArt.Sections-module__ATazDG__eventArt.is-icon {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(255, 236, 196, 0.95) 0%, rgba(250, 226, 190, 0.55) 32%, transparent 62%),
+    linear-gradient(180deg, #fff8ee 0%, #fbeedd 100%);
+}
+
+.Sections-module__ATazDG__eventArt.Sections-module__ATazDG__eventArt.is-icon img {
+  box-sizing: border-box;
+  padding: 26% 24% 6%;
+  object-position: 50% 50%;
+  filter: drop-shadow(0 6px 14px rgba(180, 40, 30, 0.18));
+}
+
+.Sections-module__ATazDG__eventCard.is-active .Sections-module__ATazDG__eventArt.is-icon img {
+  animation: iconFloat 4s ease-in-out infinite;
+}
+
+@keyframes iconFloat {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(0, -5px, 0); }
+}
+
+/* Cut-out portrait (transparent background): cream glow, room for the title above */
+.Sections-module__ATazDG__eventArt.Sections-module__ATazDG__eventArt.is-portrait {
+  background:
+    radial-gradient(ellipse at 50% 60%, rgba(233, 216, 245, 0.9) 0%, rgba(245, 236, 250, 0.6) 40%, transparent 72%),
+    linear-gradient(180deg, #fffaf4 0%, #f6eef8 100%);
+}
+
+.Sections-module__ATazDG__eventArt.Sections-module__ATazDG__eventArt.is-portrait img {
+  box-sizing: border-box;
+  padding: 26% 10% 0;
+  object-position: 50% 100%;
+}
+
+/* Rings illustration gets a lavender-tinted glow */
+.Sections-module__ATazDG__eventArt.is-icon img[src$="ring-proposal.svg"] {
+  padding: 24% 3% 0;
+  filter: none;
+}
