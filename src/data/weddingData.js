@@ -40,7 +40,7 @@ export const weddingData = {
   },
   weddingDate: "2026-12-12T19:00:00",
   dateShort: "12 · 12 · 2026",
-  hashtag: "#HarshKiKashish",
+  hashtag: "#KarshForEver",
   city: {
     en: "Ramganj Mandi, Kota",
     hi: "रामगंज मंडी, कोटा"
@@ -277,14 +277,14 @@ export const weddingData = {
         hi: "कुलदेवी माता का विधि-विधान से पावन पूजन, सुख-समृद्धि एवं अखंड सौभाग्य की मंगल प्रार्थना।"
       },
       venue: {
-        en: "Ramganj Mandi Venue",
-        hi: "रामगंज मंडी स्थल"
+        en: "Gwalior Residence",
+        hi: "ग्वालियर निवास"
       },
-      venueAddress: {
-        en: "Ramganj Mandi, Kota, Rajasthan",
-        hi: "रामगंज मंडी, कोटा, राजस्थान"
+     venueAddress: {
+        en: "Shivam Hotel, Raja Munshi Ka Bada, Chawdi Bazar, Gwalior",
+        hi: "शिवम होटल, राजा मुंशी का बाड़ा, चावड़ी बाजार, ग्वालियर"
       },
-      mapQuery: "https://maps.google.com/?q=Ramganj+Mandi+Kota+Rajasthan",
+      mapQuery: "https://maps.google.com/?q=Chawdi+Bazar+Gwalior",
       image: "/images/events/house.jpg",
       imagePosition: "50% 70%"
     },
@@ -313,14 +313,14 @@ export const weddingData = {
       },
       dressCodeColor: "#4caf50",
       venue: {
-        en: "Ramganj Mandi Venue",
-        hi: "रामगंज मंडी स्थल"
+        en: "Gwalior Residence",
+        hi: "ग्वालियर निवास"
       },
       venueAddress: {
-        en: "Ramganj Mandi, Kota, Rajasthan",
-        hi: "रामगंज मंडी, कोटा, राजस्थान"
+        en: "Shivam Hotel, Raja Munshi Ka Bada, Chawdi Bazar, Gwalior",
+        hi: "शिवम होटल, राजा मुंशी का बाड़ा, चावड़ी बाजार, ग्वालियर"
       },
-      mapQuery: "https://maps.google.com/?q=Ramganj+Mandi+Kota+Rajasthan",
+      mapQuery: "https://maps.google.com/?q=Chawdi+Bazar+Gwalior",
       image: "/images/events/mehendi-bride.svg"
     },
     {
@@ -343,10 +343,10 @@ export const weddingData = {
         hi: "अपनों के स्नेहिल हाथों से सुगंधित हल्दी, उबटन व पुष्पों की प्रेममयी वर्षा।"
       },
       dressCode: {
-        en: "Sunny Yellow / Haldi Hues",
+        en: "lavender / Haldi Hues",
         hi: "पीला / हल्दी परिधान"
       },
-      dressCodeColor: "#ffc107",
+      dressCodeColor: "#8461a7",
       venue: {
         en: "Ramganj Mandi Venue",
         hi: "रामगंज मंडी स्थल"
@@ -487,8 +487,8 @@ export const weddingData = {
       hi: "नन्हे-मुन्नों से इंतज़ार नहीं होता"
     },
     line: {
-      en: "Dancing with joy for Bua, Didi & Behen's Wedding!",
-      hi: "बुआ, दीदी और बहन की शादी की धूम!"
+      en: "Dancing with joy for Bua & Behen's Wedding!",
+      hi: "बुआ और बहन की शादी की धूम!"
     }
   },
   memories: {

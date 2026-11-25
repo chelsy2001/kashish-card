@@ -8,7 +8,7 @@ An exquisite, interactive royal Indian wedding invitation website crafted for **
 
 1. **3D Royal Envelope & Golden Wax Seal**:
    - Opens on tap with authentic 3D flap unfolding, breaking wax seal, and rising invitation card animation.
-   - Golden hashtag `#HarshKiKashish` embossed on the envelope pocket.
+   - Golden hashtag `#karsh` embossed on the envelope pocket.
 
 2. **Auspicious Hero Card**:
    - Sacred Lord Ganesha illustration with rotating geometric mandala and glowing halo.
@@ -82,7 +82,7 @@ All wedding content, family names, dates, venues, hashtags, and story lines are 
 
 - **Couple Names**: Change `groom` and `bride` in English & Hindi.
 - **Date & Time**: Update `weddingDate`, `dateShort`, and `saveTheDate`.
-- **Hashtag**: Change `hashtag` (e.g. `#HarshKiKashish`).
+- **Hashtag**: Change `hashtag` (e.g. `#KarshForever`).
 - **Events & Timings**: Edit the `events` array with your actual ceremonies and dates.
 - **Venues & Google Maps Links**: Update venue names, addresses, and `mapQuery` URLs in `venues`.
 - **Family Names**: Update `hosts.welcomedBy` and `hosts.compliments`.
